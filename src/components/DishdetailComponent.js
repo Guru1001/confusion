@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { Card, CardImg, CardBody, CardTitle, CardText, Breadcrumb, BreadcrumbItem, Button, 
-    Modal, ModalBody, ModalHeader, Label, Row, Col} from 'reactstrap';
+    Modal, ModalBody, ModalHeader, Label} from 'reactstrap';
 import { Control, LocalForm, Errors } from 'react-redux-form';
 import { Link } from 'react-router-dom';
-import { addComment } from '../redux/ActionCreators';
+import { Loading } from './LoadingComponent';
 
 const maxLength = (len) => (val) => !(val) || (val.length <= len);
 const minLength = (len) => (val) => (val) && (val.length >=len);
@@ -142,11 +142,23 @@ function RenderComments({comments, addComment, dishId}){
 
 
 const DishDetail = (props) => {
-    if(props.dish == null){
+    if(props.isLoading){
         return(
-            <div></div>
+            <div className='container'>
+                <div className='row'>
+                    <Loading />
+                </div>
+            </div>
         );
-    }else{
+    }else if(props.errMsg){
+        return(
+            <div className='container'>
+                <div className='row'>
+                    <h4>{props.errMsg}</h4>
+                </div>
+            </div>
+        );
+    }else if(props.dish != null){
         return(
             <div className='container'>
                 <div className='row'>
@@ -170,6 +182,11 @@ const DishDetail = (props) => {
                         />
                 </div>
             </div>
+        );
+    }
+    else {
+        return(
+            <div></div>
         );
     }
 }
