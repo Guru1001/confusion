@@ -84,8 +84,8 @@ class CommentForm extends Component {
 }
 
 
-function RenderDish({dish}){
-    if(dish!=null){
+function RenderDish({dishName, dishImage, dishDesc}){
+    if(dishName!=null){
         return(
             <div className='col-12 col-md-5 m-1'>
                 <FadeTransform in
@@ -93,10 +93,10 @@ function RenderDish({dish}){
                         exitTransform : 'scale(0.5) translateY(-50%)'
                     }}>
                     <Card>
-                        <CardImg width="100%" src={baseUrl + dish.image} alt={dish.name}/>
+                        <CardImg width="100%" src={baseUrl + dishImage} alt={dishName}/>
                         <CardBody>
-                            <CardTitle>{dish.name}</CardTitle>
-                            <CardText>{dish.description}</CardText>
+                            <CardTitle>{dishName}</CardTitle>
+                            <CardText>{dishDesc}</CardText>
                         </CardBody>
                     </Card>
                 </FadeTransform>
@@ -115,11 +115,9 @@ function RenderComments({comments, postComment, dishId}){
         const viewComments = comments.map((comment)=>{
             return(
                 <Fade in>
-                    <li key={comment.id}>
+                    <li key={comment._id}>
                         <p>{comment.comment}</p>
-                        <p>-- {comment.author}, {new Intl.DateTimeFormat('en-US',
-                        {year : 'numeric', month : 'short', day: '2-digit'})
-                        .format(new Date(Date.parse(comment.date)))}</p>
+                        <p>-- {comment.author}, {new Date(comment.updatedAt).toLocaleString()}</p>
                     </li>
                 </Fade>
             );
@@ -185,11 +183,13 @@ const DishDetail = (props) => {
                 </div>
                 <div className='row'>
                     <RenderDish 
-                        dish={props.dish}/>
+                        dishName={props.dish.name}
+                        dishImage={props.dish.image}
+                        dishDesc={props.dish.description}/>
                     <RenderComments 
-                        comments={props.comments}
+                        comments={props.dish.comments}
                         postComment={props.postComment}
-                        dishId = {props.dish.id}
+                        dishId = {props.dish._id}
                         />
                 </div>
             </div>

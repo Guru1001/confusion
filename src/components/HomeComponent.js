@@ -20,7 +20,7 @@ function RenderCard({item, isLoading, errMsg}){
                         exitTransform : 'scale(0.5) translateY(-50%)'
                     }}>
                 <Card>
-                    <CardImg src={baseUrl + item.image} alt={item.name}/>
+                    <CardImg src={ baseUrl + item.image } alt={item.name}/>
                     <CardBody>
                         <CardTitle>
                             {item.name}
@@ -50,7 +50,9 @@ function Home(props){
                         errMsg = {props.promosErrMsg}/>
                 </div>
                 <div className='col-12 col-md m-1'>
-                    <RenderCard item={props.leader}/>
+                    <RenderCard item={props.leader}
+                        isLoading={props.leadersLoading} 
+                        errMsg = {props.leadersErrMsg}/>
                 </div>
             </div>
         </div>
