@@ -4,7 +4,7 @@ import { Navbar, NavbarBrand, Nav, NavbarToggler, Collapse,
     Label, Input } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
 import { baseUrl } from "../shared/baseUrl";
-import { FaAddressCard, FaHome, FaList, FaSignInAlt } from 'react-icons/fa';
+import { FaAddressCard, FaHome, FaSignInAlt } from 'react-icons/fa';
 import { RiInformationFill } from 'react-icons/ri';
 import { MdRestaurantMenu } from 'react-icons/md';
 
