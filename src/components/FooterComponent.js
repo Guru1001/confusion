@@ -1,5 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { FaGoogle, FaFacebookF, FaLinkedinIn, FaTwitter, FaYoutube, FaPhoneAlt, 
+    FaFax } from 'react-icons/fa';
+import { FiMail } from 'react-icons/fi';
 
 function Footer(props){
     return(
@@ -21,33 +24,33 @@ function Footer(props){
 		                121, Clear Water Bay Road<br/>
 		                Clear Water Bay, Kowloon<br/>
 		                HONG KONG<br/>
-		                <i className="fa fa-phone fa-lg"></i>: +852 1234 5678<br/>
-		                <i className="fa fa-fax fa-lg"></i>: +852 8765 4321<br/>
-                        <i className="fa fa-envelope fa-lg"></i>: 
+		                <FaPhoneAlt/> : +852 1234 5678<br/>
+		                <FaFax/> : +852 8765 4321<br/>
+                        <FiMail/> : 
                         <a href="mailto:confusion@food.net">
-                        confusion@food.net</a>
+                        &nbsp;confusion@food.net</a>
                     </address>
                 </div>
                 <div className="col-12 col-sm-4 align-self-center">
                     <div className="text-center">
-                        <a className="btn btn-social-icon btn-google" 
+                        <a className="btn btn-social-icon" 
                         href="http://google.com/+">
-                            <i className="fa fa-google-plus"></i></a>
-                        <a className="btn btn-social-icon btn-facebook" 
+                            <FaGoogle/></a>
+                        <a className="btn btn-social-icon" 
                         href="http://www.facebook.com/profile.php?id=">
-                            <i className="fa fa-facebook"></i></a>
-                        <a className="btn btn-social-icon btn-linkedin" 
+                            <FaFacebookF/></a>
+                        <a className="btn btn-social-icon" 
                         href="http://www.linkedin.com/in/">
-                            <i className="fa fa-linkedin"></i></a>
-                        <a className="btn btn-social-icon btn-twitter" 
+                            <FaLinkedinIn/></a>
+                        <a className="btn btn-social-icon" 
                         href="http://twitter.com/">
-                            <i className="fa fa-twitter"></i></a>
-                        <a className="btn btn-social-icon btn-google" 
+                            <FaTwitter/></a>
+                        <a className="btn btn-social-icon" 
                         href="http://youtube.com/">
-                            <i className="fa fa-youtube"></i></a>
+                            <FaYoutube/></a>
                         <a className="btn btn-social-icon" 
                         href="mailto:">
-                            <i className="fa fa-envelope-o"></i></a>
+                            <FiMail/></a>
                     </div>
                 </div>
             </div>

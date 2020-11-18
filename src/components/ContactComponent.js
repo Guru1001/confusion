@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Breadcrumb, BreadcrumbItem, Button, Label, Col, Row} from 'reactstrap';
 import { Control, Form, Errors } from 'react-redux-form';
 import { Link } from 'react-router-dom';
+import { FaPhoneAlt, FaFax } from 'react-icons/fa';
+import { FiMail } from 'react-icons/fi';
 
 const required = (val) => val && val.length;
 const maxLength = (len) => (val) => !(val) || (val.length <= len);
@@ -45,10 +47,11 @@ class Contact extends Component {
                             121, Clear Water Bay Road<br />
                             Clear Water Bay, Kowloon<br />
                             HONG KONG<br />
-                            <i className="fa fa-phone"></i>: +852 1234 5678<br />
-                            <i className="fa fa-fax"></i>: +852 8765 4321<br />
-                            <i className="fa fa-envelope"></i>: <a 
-                            href="mailto:confusion@food.net">confusion@food.net</a>
+                            <FaPhoneAlt/> : +852 1234 5678<br/>
+                            <FaFax/> : +852 8765 4321<br/>
+                            <FiMail/> : 
+                            <a href="mailto:confusion@food.net">
+                            &nbsp;confusion@food.net</a>
                             </address>
                     </div>
                     <div className="col-12 col-sm-6 offset-sm-1">

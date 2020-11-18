@@ -4,6 +4,10 @@ import { Navbar, NavbarBrand, Nav, NavbarToggler, Collapse,
     Label, Input } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
 import { baseUrl } from "../shared/baseUrl";
+import { FaAddressCard, FaHome, FaList, FaSignInAlt } from 'react-icons/fa';
+import { RiInformationFill } from 'react-icons/ri';
+import { MdRestaurantMenu } from 'react-icons/md';
+
 
 class Header extends Component{
     constructor(props){
@@ -49,31 +53,40 @@ class Header extends Component{
                         <Collapse isOpen={this.state.isNavOpen} navbar>
                             <Nav navbar >
                                 <NavItem>
-                                    <NavLink className='nav-link' to='/home'>
-                                        <span className='fa fa-home fa-lg'> Home</span>
+                                    <NavLink className='nav-link' to='/home'
+                                        style={{fontSize:20}}>
+                                        <FaHome style={{verticalAlign:"text-bottom"}}/>
+                                        <span> Home</span>
                                     </NavLink>
                                 </NavItem>
                                 <NavItem>
-                                    <NavLink className='nav-link' to='/aboutus'>
-                                        <span className='fa fa-info fa-lg'> About Us</span>
+                                    <NavLink className='nav-link' to='/aboutus' 
+                                        style={{fontSize:20}}>
+                                        <RiInformationFill style={{verticalAlign:"text-bottom"}}/>
+                                        <span> About Us</span>
                                     </NavLink>
                                 </NavItem>
                                 <NavItem>
-                                    <NavLink className='nav-link' to='/menu'>
-                                        <span className='fa fa-list fa-lg'> Menu</span>
+                                    <NavLink className='nav-link' to='/menu'
+                                        style={{fontSize:20}}>
+                                        <MdRestaurantMenu style={{verticalAlign:"text-bottom"}}/>
+                                        <span> Menu</span>
                                     </NavLink>
                                 </NavItem>
                                 <NavItem>
-                                    <NavLink className='nav-link' to='/contactus'>
-                                        <span className='fa fa-address-card fa-lg'> 
-                                        Contact Us</span>
+                                    <NavLink className='nav-link' to='/contactus'
+                                        style={{fontSize:20}}>
+                                        <FaAddressCard style={{verticalAlign:"text-bottom"}}/>
+                                        <span> Contact Us</span>
                                     </NavLink>
                                 </NavItem>
                             </Nav>
                             <Nav className='ml-auto' navbar>
                                 <NavItem>
-                                    <Button outline onClick={this.toggleModal}>
-                                        <span className='fa fa-sign-in fa-lg'> Login</span>
+                                    <Button outline onClick={this.toggleModal}
+                                        style={{fontSize:20}}>
+                                        <FaSignInAlt style={{verticalAlign:"text-bottom"}}/>
+                                        <span> Login</span>
                                     </Button>
                                 </NavItem>
                             </Nav>
