@@ -6,6 +6,7 @@ import Menu from './MenuComponent';
 import DishDetail from './DishdetailComponent';
 import Contact from './ContactComponent';
 import About from './AboutComponent';
+import { urlRoot } from '../shared/baseUrl';
 import { Switch, Route, Redirect, withRouter} from 'react-router-dom';
 import { connect } from 'react-redux';
 import { postComment,postFeedback, fetchDishes , fetchPromos, fetchLeaders} from '../redux/ActionCreators';
@@ -74,22 +75,22 @@ class Main extends Component{
                     <TransitionGroup>
                         <CSSTransition key={this.props.location.key} classNames='page' timeout={300}>
                             <Switch location={this.props.location}>
-                                <Route path="/home" component={ HomePage }/>
-                                <Route exact path="/menu" 
+                                <Route path={urlRoot+"/home"} component={ HomePage }/>
+                                <Route exact path={urlRoot+"/menu"} 
                                 component={ ()=> <Menu dishes={this.props.dishes}/>}/>
-                                <Route path="/menu/:dishId" component={ DishWithId }/>
+                                <Route path={urlRoot+"/menu/:dishId"} component={ DishWithId }/>
                                 <Route exact path="/contactus"
                                 component={ ()=> 
                                     <Contact 
                                         resetFeedbackForm={this.props.resetFeedbackForm}
                                         postFeedback = {this.props.postFeedback}
                                         />}/>
-                                <Route exact path="/aboutus" 
+                                <Route exact path={urlRoot+"/aboutus"} 
                                 component={() => 
                                     <About 
                                         leaders={this.props.leaders}
                                     />}/>
-                                <Redirect to="/home"/>
+                                <Redirect to={urlRoot+"/home"}/>
                             </Switch>
                         </CSSTransition>
                     </TransitionGroup>

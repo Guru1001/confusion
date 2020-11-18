@@ -3,7 +3,7 @@ import { Navbar, NavbarBrand, Nav, NavbarToggler, Collapse,
     NavItem, Jumbotron, Button, Modal, ModalHeader, ModalBody, Form, FormGroup, 
     Label, Input } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
-import { baseUrl } from "../shared/baseUrl";
+import { baseUrl, urlRoot } from "../shared/baseUrl";
 import { FaAddressCard, FaHome, FaSignInAlt } from 'react-icons/fa';
 import { RiInformationFill } from 'react-icons/ri';
 import { MdRestaurantMenu } from 'react-icons/md';
@@ -46,35 +46,35 @@ class Header extends Component{
                 <Navbar dark expand='md'>
                     <div className="container">
                         <NavbarToggler onClick={this.toggleNav}/>
-                        <NavbarBrand className='mr-auto' href="/home">
+                        <NavbarBrand className='mr-auto' href={urlRoot+"/home"}>
                             <img src = { baseUrl+"images/logo.png" } height='30' 
                             width='41' alt='Restorante Con Fusion'/>
                         </NavbarBrand>
                         <Collapse isOpen={this.state.isNavOpen} navbar>
                             <Nav navbar >
                                 <NavItem>
-                                    <NavLink className='nav-link' to='/home'
+                                    <NavLink className='nav-link' to={urlRoot + '/home'}
                                         style={{fontSize:20}}>
                                         <FaHome style={{verticalAlign:"text-bottom"}}/>
                                         <span> Home</span>
                                     </NavLink>
                                 </NavItem>
                                 <NavItem>
-                                    <NavLink className='nav-link' to='/aboutus' 
+                                    <NavLink className='nav-link' to={urlRoot + '/aboutus'} 
                                         style={{fontSize:20}}>
                                         <RiInformationFill style={{verticalAlign:"text-bottom"}}/>
                                         <span> About Us</span>
                                     </NavLink>
                                 </NavItem>
                                 <NavItem>
-                                    <NavLink className='nav-link' to='/menu'
+                                    <NavLink className='nav-link' to={urlRoot + '/menu'}
                                         style={{fontSize:20}}>
                                         <MdRestaurantMenu style={{verticalAlign:"text-bottom"}}/>
                                         <span> Menu</span>
                                     </NavLink>
                                 </NavItem>
                                 <NavItem>
-                                    <NavLink className='nav-link' to='/contactus'
+                                    <NavLink className='nav-link' to={urlRoot + '/contactus'}
                                         style={{fontSize:20}}>
                                         <FaAddressCard style={{verticalAlign:"text-bottom"}}/>
                                         <span> Contact Us</span>
