@@ -81,11 +81,11 @@ function About(props) {
             <div className="row row-content">
                 <div className="col-12 col-md-6">
                     <h2>Our History</h2>
-                    <p>Started in 2010, Ristorante con Fusion quickly established 
-                        itself as a culinary icon par excellence in Hong Kong. 
+                    <p>Started in 2010, Ristorante Fusion Taj quickly established 
+                        itself as a culinary icon par excellence in India. 
                         With its unique brand of world fusion cuisine that can 
                         be found nowhere else, it enjoys patronage from the 
-                        A-list clientele in Hong Kong.  Featuring four of the 
+                        A-list clientele in India.  Featuring four of the 
                         best three-star Michelin chefs in the world, you never 
                         know what will arrive on your plate the next time you 
                         visit us.</p>
@@ -103,11 +103,11 @@ function About(props) {
                                 <dt className="col-6">Started</dt>
                                 <dd className="col-6">3 Feb. 2013</dd>
                                 <dt className="col-6">Major Stake Holder</dt>
-                                <dd className="col-6">HK Fine Foods Inc.</dd>
+                                <dd className="col-6">Tata Groups</dd>
                                 <dt className="col-6">Last Year's Turnover</dt>
                                 <dd className="col-6">$1,250,375</dd>
                                 <dt className="col-6">Employees</dt>
-                                <dd className="col-6">40</dd>
+                                <dd className="col-6">258</dd>
                             </dl>
                         </CardBody>
                     </Card>

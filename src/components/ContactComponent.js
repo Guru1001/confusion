@@ -44,11 +44,11 @@ class Contact extends Component {
                     <div className="col-12 col-sm-4 offset-sm-1">
                             <h5>Our Address</h5>
                             <address>
-                            121, Clear Water Bay Road<br />
-                            Clear Water Bay, Kowloon<br />
-                            HONG KONG<br />
-                            <FaPhoneAlt/> : +852 1234 5678<br/>
-                            <FaFax/> : +852 8765 4321<br/>
+                            Apollo Bandar<br/>
+                            Colaba, Mumbai - 400001<br/>
+                            India<br/>
+                            <FaPhoneAlt/> : +9152 1234 5678<br/>
+                            <FaFax/> : +9152 8765 4321<br/>
                             <FiMail/> : 
                             <a href="mailto:confusion@food.net">
                             &nbsp;confusion@food.net</a>
