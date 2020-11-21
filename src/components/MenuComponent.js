@@ -10,7 +10,15 @@ function RenderMenuItem({dish, onClick}){
             <Link to={`${urlRoot}/menu/${dish._id}`}>
                 <CardImg width="100%" src={baseUrl + dish.image} alt={dish.name}/>
                 <CardImgOverlay>
-                    <CardTitle>{dish.name}</CardTitle>
+                    <CardTitle>
+                        <span style={{
+                            color:"#fff", 
+                            background:"rgba(28,33,38,0.6)", 
+                            padding:5,
+                            borderRadius:50}}>
+                            {dish.name}
+                        </span>
+                        </CardTitle>
                 </CardImgOverlay>
             </Link>
         </Card>
@@ -46,7 +54,7 @@ const Menu = (props) => {
             <div className='container'>
                 <div className='row'>
                     <Breadcrumb>
-                        <BreadcrumbItem><Link to='/home'>Home</Link></BreadcrumbItem>
+                        <BreadcrumbItem><Link className="link-style" to='/home'>Home</Link></BreadcrumbItem>
                         <BreadcrumbItem active>Menu</BreadcrumbItem>
                     </Breadcrumb>
                     <div className='col-12'>

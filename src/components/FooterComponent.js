@@ -13,10 +13,10 @@ function Footer(props){
                 <div className="col-4 offset-1 col-sm-2">
                     <h5>Links</h5>
                     <ul className="list-unstyled">
-                        <li><Link to={urlRoot+"/home"}>Home</Link></li>
-                        <li><Link to={urlRoot+"/aboutus"}>About Us</Link></li>
-                        <li><Link to={urlRoot+"/menu"}>Menu</Link></li>
-                        <li><Link to={urlRoot+"/contactus"}>Contact Us</Link></li>
+                        <li><Link className="link-style" to={urlRoot+"/home"}>Home</Link></li>
+                        <li><Link className="link-style" to={urlRoot+"/aboutus"}>About Us</Link></li>
+                        <li><Link className="link-style" to={urlRoot+"/menu"}>Menu</Link></li>
+                        <li><Link className="link-style" to={urlRoot+"/contactus"}>Contact Us</Link></li>
                     </ul>
                 </div>
                 <div className="col-7 col-sm-5">
@@ -28,7 +28,7 @@ function Footer(props){
 		                <FaPhoneAlt/> : +9152 1234 5678<br/>
 		                <FaFax/> : +9152 8765 4321<br/>
                         <FiMail/> : 
-                        <a href="mailto:confusion@food.net">
+                        <a className="link-style" href="mailto:confusion@food.net">
                         &nbsp;confusion@food.net</a>
                     </address>
                 </div>

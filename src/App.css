@@ -35,6 +35,19 @@ address{
     background-image: linear-gradient(315deg, #485461 0%, #28313b 74%);
 }
 
+.background-dark {
+    background-color: #485461;
+    background-image: linear-gradient(315deg, #485461 0%, #28313b 74%);
+}
+
+.link-style{
+    color:#485461;
+}
+.link-style:hover{
+    color:#0f0f0f;
+    text-decoration: none;
+}
+
 .page-enter{
     opacity: 0;
 }

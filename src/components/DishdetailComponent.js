@@ -4,8 +4,9 @@ import { Card, CardImg, CardBody, CardTitle, CardText, Breadcrumb, BreadcrumbIte
 import { Control, LocalForm, Errors } from 'react-redux-form';
 import { Link } from 'react-router-dom';
 import { Loading } from './LoadingComponent';
-import { baseUrl } from '../shared/baseUrl';
+import { baseUrl, urlRoot } from '../shared/baseUrl';
 import { FadeTransform, Fade, Stagger } from 'react-animation-components';
+import { FaPencilAlt } from 'react-icons/fa';
 
 const maxLength = (len) => (val) => !(val) || (val.length <= len);
 const minLength = (len) => (val) => (val) && (val.length >=len);
@@ -30,7 +31,7 @@ class CommentForm extends Component {
         return(
             <div>
                 <Button outline onClick={this.toggleModal}>
-                    <span className='fa fa-pencil fa-lg'> Submit Comment</span>
+                    <span><FaPencilAlt/> Submit Comment</span>
                 </Button>
                 <Modal isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
                     <ModalHeader toggle={this.toggleModal}>Submit Comment</ModalHeader>
@@ -71,8 +72,8 @@ class CommentForm extends Component {
                                     name='comment'
                                     className='form-control'
                                     rows='6'/>
-                            <Button type='submit' value='submit' color='primary'
-                            className='mt-3'>
+                            <Button type='submit' value='submit'
+                            className='mt-3 background-dark'>
                                 Submit
                             </Button>
                         </LocalForm>
@@ -172,8 +173,8 @@ const DishDetail = (props) => {
             <div className='container'>
                 <div className='row'>
                     <Breadcrumb>
-                        <BreadcrumbItem><Link to='/home'>Home</Link></BreadcrumbItem>
-                        <BreadcrumbItem><Link to='/menu'>Menu</Link></BreadcrumbItem>
+                        <BreadcrumbItem><Link className="link-style" to={urlRoot +'/home'}>Home</Link></BreadcrumbItem>
+                        <BreadcrumbItem><Link className="link-style" to={urlRoot +'/menu'}>Menu</Link></BreadcrumbItem>
                         <BreadcrumbItem active>{props.dish.name}</BreadcrumbItem>
                     </Breadcrumb>
                     <div className='col-12'>

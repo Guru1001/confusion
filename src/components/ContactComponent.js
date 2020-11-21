@@ -4,6 +4,7 @@ import { Control, Form, Errors } from 'react-redux-form';
 import { Link } from 'react-router-dom';
 import { FaPhoneAlt, FaFax } from 'react-icons/fa';
 import { FiMail } from 'react-icons/fi';
+import { urlRoot } from '../shared/baseUrl';
 
 const required = (val) => val && val.length;
 const maxLength = (len) => (val) => !(val) || (val.length <= len);
@@ -29,7 +30,7 @@ class Contact extends Component {
             <div className="container">
                 <div className='row'>
                     <Breadcrumb>
-                        <BreadcrumbItem><Link to='/home'>Home</Link></BreadcrumbItem>
+                        <BreadcrumbItem><Link className="link-style" to={urlRoot + '/home'}>Home</Link></BreadcrumbItem>
                         <BreadcrumbItem active>Contact Us</BreadcrumbItem>
                     </Breadcrumb>
                     <div className='col-12'>
@@ -50,7 +51,7 @@ class Contact extends Component {
                             <FaPhoneAlt/> : +9152 1234 5678<br/>
                             <FaFax/> : +9152 8765 4321<br/>
                             <FiMail/> : 
-                            <a href="mailto:confusion@food.net">
+                            <a className="link-style" href="mailto:confusion@food.net">
                             &nbsp;confusion@food.net</a>
                             </address>
                     </div>
@@ -202,7 +203,7 @@ class Contact extends Component {
                             </Row>
                             <Row className='form-group'>
                                 <Col md={{size:10, offset:2}}>
-                                    <Button type='submit' color='primary'>
+                                    <Button type='submit' className="background-dark">
                                         Send Feedback
                                     </Button>
                                 </Col>

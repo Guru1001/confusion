@@ -1,7 +1,7 @@
 import React from 'react';
 import { Breadcrumb, BreadcrumbItem, Card, CardBody, CardHeader, Media } from 'reactstrap';
 import { Link } from 'react-router-dom';
-import { baseUrl } from '../shared/baseUrl';
+import { baseUrl, urlRoot } from '../shared/baseUrl';
 import { Loading } from './LoadingComponent';
 import { Fade, Stagger } from 'react-animation-components';
 
@@ -70,7 +70,7 @@ function About(props) {
         <div className="container">
             <div className="row">
                 <Breadcrumb>
-                    <BreadcrumbItem><Link to="/home">Home</Link></BreadcrumbItem>
+                    <BreadcrumbItem><Link className="link-style" to={ urlRoot + "/home"}>Home</Link></BreadcrumbItem>
                     <BreadcrumbItem active>About Us</BreadcrumbItem>
                 </Breadcrumb>
                 <div className="col-12">
@@ -96,7 +96,7 @@ function About(props) {
                 </div>
                 <div className="col-12 col-md-5">
                     <Card>
-                        <CardHeader className="bg-primary text-white">
+                        <CardHeader className="background-dark text-white">
                             Facts At a Glance</CardHeader>
                         <CardBody>
                             <dl className="row p-1">

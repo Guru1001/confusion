@@ -125,36 +125,6 @@ export const addDishes = (dishes) => ({
 })
 
 
-// export const fetchComments = () => (dispatch) => {
-//     return fetch(baseUrl + 'comments')
-//         .then(response => {
-//             console.log(response);
-//             if(response.ok)return response;
-//             else{
-//                 let error = new Error('Error '+ response.status
-//                                     + ': ' + response.statusText);
-//                 error.response = response;
-//                 throw error;
-//             }
-//         }, error => {
-//             throw new Error(error.message);
-//         })
-//         .then(response => response.json())
-//         .then(comments => dispatch(addComments(comments)))
-//         .catch(error => {
-//             dispatch(commentsFailed(error.message));
-//         });
-// }
-// export const commentsFailed = (errmsg) => ({
-//     type : ActionTypes.COMMENTS_FAILED,
-//     payload : errmsg
-// })
-// export const addComments = (comments) => ({
-//     type : ActionTypes.ADD_COMMENTS,
-//     payload : comments,
-// })
-
-
 export const fetchPromos = () => (dispatch) => {
     dispatch(promosLoading(true));
     return fetch(baseUrl + 'promotions')
@@ -208,7 +178,7 @@ export const fetchLeaders = () => (dispatch) => {
         .then(response => response.json())
         .then(leaders => dispatch(addLeaders(leaders)))
         .catch(error => {
-            dispatch(promosFailed(error.message));
+            dispatch(leadersFailed(error.message));
         });
 }
 
