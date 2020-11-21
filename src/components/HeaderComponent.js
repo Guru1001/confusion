@@ -6,7 +6,7 @@ import { NavLink } from 'react-router-dom';
 import { baseUrl, urlRoot } from "../shared/baseUrl";
 import { FaAddressCard, FaHome, FaSignInAlt } from 'react-icons/fa';
 import { RiInformationFill } from 'react-icons/ri';
-import { MdRestaurantMenu } from 'react-icons/md';
+import { MdRestaurantMenu, MdSystemUpdate } from 'react-icons/md';
 
 
 class Header extends Component{
@@ -47,7 +47,7 @@ class Header extends Component{
                     <div className="container">
                         <NavbarToggler onClick={this.toggleNav}/>
                         <NavbarBrand className='mr-auto' href={urlRoot+"/home"}>
-                            <img src = { baseUrl+"images/logo.png" } height='30' 
+                            <img src = { process.env.PUBLIC_URL + "/logo.png" } height='30' 
                             width='41' alt='Restorante Con Fusion'/>
                         </NavbarBrand>
                         <Collapse isOpen={this.state.isNavOpen} navbar>
