@@ -11,14 +11,16 @@
 }
 
 .footer{
-    background-color: #D1C4E9;
+    background-color: #201E1F;
     margin:0px auto;
     padding: 20px 0px 20px 0px;
+    background: #bdc3c7;
+    background: -webkit-linear-gradient(to right, #bdc3c7, #2c3e50);
+    background: linear-gradient(to right, #bdc3c7, #2c3e50);
 }
 .jumbotron {
     padding:70px 30px 70px 30px;
     margin:0px auto;
-    background: #9575CD ;
     color:floralwhite;
 }
 
@@ -29,7 +31,8 @@ address{
 }
 
 .navbar-dark {
-    background-color: #512DA8;
+    background-color: #485461;
+    background-image: linear-gradient(315deg, #485461 0%, #28313b 74%);
 }
 
 .page-enter{

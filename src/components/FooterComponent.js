@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { FaGoogle, FaFacebookF, FaLinkedinIn, FaTwitter, FaYoutube, FaPhoneAlt, 
     FaFax } from 'react-icons/fa';
 import { FiMail } from 'react-icons/fi';
-import { baseUrl, urlRoot } from '../shared/baseUrl';
+import { urlRoot } from '../shared/baseUrl';
 
 function Footer(props){
     return(
@@ -22,11 +22,11 @@ function Footer(props){
                 <div className="col-7 col-sm-5">
                     <h5>Our Address</h5>
                     <address>
-		                121, Clear Water Bay Road<br/>
-		                Clear Water Bay, Kowloon<br/>
-		                HONG KONG<br/>
-		                <FaPhoneAlt/> : +852 1234 5678<br/>
-		                <FaFax/> : +852 8765 4321<br/>
+		                Apollo Bandar<br/>
+		                Colaba, Mumbai - 400001<br/>
+		                India<br/>
+		                <FaPhoneAlt/> : +9152 1234 5678<br/>
+		                <FaFax/> : +9152 8765 4321<br/>
                         <FiMail/> : 
                         <a href="mailto:confusion@food.net">
                         &nbsp;confusion@food.net</a>
@@ -57,7 +57,7 @@ function Footer(props){
             </div>
             <div className="row justify-content-center">             
                 <div className="col-auto">
-                    <p>© Copyright 2018 Ristorante Con Fusion</p>
+                    <p>© Copyright 2020 Ristorante Fusion Taj</p>
                 </div>
             </div>
         </div>

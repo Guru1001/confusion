@@ -79,7 +79,7 @@ class Main extends Component{
                                 <Route exact path={urlRoot+"/menu"} 
                                 component={ ()=> <Menu dishes={this.props.dishes}/>}/>
                                 <Route path={urlRoot+"/menu/:dishId"} component={ DishWithId }/>
-                                <Route exact path="/contactus"
+                                <Route exact path={urlRoot + "/contactus"}
                                 component={ ()=> 
                                     <Contact 
                                         resetFeedbackForm={this.props.resetFeedbackForm}
