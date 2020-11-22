@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import { FaPhoneAlt, FaFax } from 'react-icons/fa';
 import { FiMail } from 'react-icons/fi';
 import { urlRoot } from '../shared/baseUrl';
+import Iframe from 'react-iframe';
 
 const required = (val) => val && val.length;
 const maxLength = (len) => (val) => !(val) || (val.length <= len);
@@ -42,7 +43,7 @@ class Contact extends Component {
                     <div className="col-12">
                     <h3>Location Information</h3>
                     </div>
-                    <div className="col-12 col-sm-4 offset-sm-1">
+                    <div className="col-12 col-sm-4 offset-sm-1 mt-4 mt-sm-2">
                             <h5>Our Address</h5>
                             <address>
                             Apollo Bandar<br/>
@@ -55,10 +56,24 @@ class Contact extends Component {
                             &nbsp;confusion@food.net</a>
                             </address>
                     </div>
-                    <div className="col-12 col-sm-6 offset-sm-1">
+                    <div className="col-12 col-sm-6 offset-sm-1 mt-4 mt-sm-2">
                         <h5>Map of our Location</h5>
+                        <div
+                            style={{
+                                borderRadius:10,
+                                overflow:"hidden"
+                            }}
+                        >
+                            <Iframe
+                                url="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241550.01593242184!2d72.69310231640624!3d18.921698199999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7d1c06fffffff%3A0xc0290485a4d73f57!2sThe%20Taj%20Mahal%20Palace%2C%20Mumbai!5e0!3m2!1sen!2sin!4v1606060315045!5m2!1sen!2sin"
+                                width="100%"
+                                height="200px"
+                                overflow="hidden"
+                                frameBorder="0"
+                            />
+                        </div>
                     </div>
-                    <div className="col-12 col-sm-11 offset-sm-1">
+                    <div className="col-12 col-sm-11 offset-sm-1 mt-4 mt-sm-2">
                         <div className="btn-group" role="group">
                             <a role="button" className="btn btn-primary" 
                             href="tel:+85212345678">
