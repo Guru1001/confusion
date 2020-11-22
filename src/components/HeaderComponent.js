@@ -3,7 +3,7 @@ import { Navbar, NavbarBrand, Nav, NavbarToggler, Collapse,
     NavItem, Jumbotron, Button, Modal, ModalHeader, ModalBody, Form, FormGroup, 
     Label, Input } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
-import {  urlRoot } from "../shared/baseUrl";
+import { urlRoot } from "../shared/baseUrl";
 import { FaAddressCard, FaHome, FaSignInAlt } from 'react-icons/fa';
 import { RiInformationFill } from 'react-icons/ri';
 import { MdRestaurantMenu } from 'react-icons/md';

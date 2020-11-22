@@ -16,7 +16,6 @@ import { TransitionGroup, CSSTransition } from 'react-transition-group';
 const mapStateToProps = state => {
     return {
         dishes : state.dishes,
-        // comments : state.comments,
         promotions : state.promotions,
         leaders : state.leaders,
     } 
@@ -29,7 +28,6 @@ const mapDispatchToProps = (dispatch) => ({
         dispatch(postFeedback(firstname, lastname, telnum, email, agree, contacttype, message)),
     fetchDishes: () => {dispatch(fetchDishes())},
     resetFeedbackForm: () => {dispatch(actions.reset('feedback'))},
-    //fetchComments: () => {dispatch(fetchComments())},
     fetchPromos: () => {dispatch(fetchPromos())},
     fetchLeaders: () =>{dispatch(fetchLeaders())},
 })
@@ -38,7 +36,6 @@ class Main extends Component{
 
     componentDidMount(){
         this.props.fetchDishes();
-        //this.props.fetchComments();
         this.props.fetchPromos();
         this.props.fetchLeaders();
     }

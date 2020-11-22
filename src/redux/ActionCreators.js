@@ -50,8 +50,7 @@ export const postFeedback = (firstname, lastname, telnum, email, agree, contactt
         contacttype: contacttype,
         message : message,
     }
-    newFeedback.date = new Date().toISOString();
-    return fetch(baseUrl + 'feedback', {
+    return fetch(baseUrl + 'feedbacks', {
         method: 'POST',
         body: JSON.stringify(newFeedback),
         headers: {
@@ -74,13 +73,12 @@ export const postFeedback = (firstname, lastname, telnum, email, agree, contactt
     .then(feedback => addFeedback(feedback))
     .catch(error => {
         console.log("Post error : " + error.message);
-        alert('Your feedback could not be posted\nError: '+ error.message);
+        alert('Your feedback could not be posted\n'+ error.message);
     });
 }
 
 export const addFeedback = (feedback) => {
     alert('Feedback successfully submitted' +
-        '\nId     : ' + feedback.id +
         '\nName   : ' + feedback.firstname + ' ' + feedback.lastname +
         '\nTelnum : ' + feedback.telnum + 
         '\nEmail  : ' + feedback.email +
