@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "7392b7c6d299a82e64a8f6f061d6ee1d",
+    "revision": "a9cadb6464d8696d2eae190fdf870cc8",
     "url": "/confusion/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/confusion/static/css/2.f1f8a52f.chunk.css"
   },
   {
-    "revision": "e42e40674a3471910e17",
+    "revision": "c662a14aab56a964f5a3",
     "url": "/confusion/static/css/main.e47822f1.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/confusion/static/js/2.39938968.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "e42e40674a3471910e17",
-    "url": "/confusion/static/js/main.9ff30c67.chunk.js"
+    "revision": "c662a14aab56a964f5a3",
+    "url": "/confusion/static/js/main.45ed678d.chunk.js"
   },
   {
     "revision": "47b295cfc61f796a9c36",
